@@ -1,0 +1,31 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Title</th>
+                <th scope="col">Content</th>
+                <th scope="col">Date</th>
+                <th scope="col">Image</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let article of articles">
+                <td>{{article.id}}</td>
+                <td>{{article.title}}</td>
+                <td>{{article.content}}</td>
+                <td>{{article.date}}</td>
+                <td>{{article.img}}</td>
+                <td>
+                    <button class="btn btn-success" (click)="goToDisplayOrEditArticle(article.id, 0)">Display</button>
+                    <button class="btn btn-info" (click)="goToDisplayOrEditArticle(article.id, 1)">Edit</button>
+                    <button class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="text-center">
+    <button class="btn btn-success" (click)="goToAddArticle()">Add</button>
+</div>

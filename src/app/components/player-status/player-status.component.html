@@ -1,0 +1,24 @@
+<app-banner title="Player IMC"></app-banner>
+<div class="site-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <form #imcForm="ngForm" (ngSubmit)="calculate()">
+                    <div class="form-group">
+                        <input type="text" class="form-control" [(ngModel)]="player.height"
+                            [ngModelOptions]="{standalone:true}" placeholder="Height (cm)">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" [(ngModel)]="player.weight"
+                            [ngModelOptions]="{standalone:true}" placeholder="Weight (kg)">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary py-3 px-5">Calculate IMC</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{{result.imc}} <br>
+{{result.message}} <br>

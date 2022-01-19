@@ -1,0 +1,18 @@
+<app-banner title="User Profile"></app-banner>
+<div class="container" style="margin:100px;">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="custom-media d-flex">
+                <div class="img mr-4">
+                    <img [src]="user.avatar" alt="Image" class="img-fluid">
+                </div>
+                <div class="text">
+                    <span class="meta">{{user.email}}</span>
+                    <h3 class="mb-4"><a href="#">{{user.fName}}</a></h3>
+                    <p>{{user.lName}}</p>
+                    <p><a href="#">Edit</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

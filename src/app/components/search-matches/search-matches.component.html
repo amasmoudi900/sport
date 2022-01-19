@@ -1,0 +1,30 @@
+<app-banner title="Search"></app-banner>
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <form [formGroup]="searchForm">
+          <div class="form-group">
+            <input type="text" class="form-control" formControlName='teamOne' placeholder="Insert team one">
+          </div>
+          <div *ngIf="searchForm.controls['teamOne'].invalid && 
+          (searchForm.controls['teamOne'].dirty || 
+          searchForm.controls['teamOne'].touched)">
+            <div *ngIf="searchForm.controls['teamOne'].errors.required" class="error-class">
+              Team One is required
+            </div>
+          </div>
+
+          <div class="form-group">
+            <button class="btn btn-primary py-3 px-5" (click)="search()">Search</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="matches?.length == 0" class="founded-matches" >
+  No founded matches</div>
+<div *ngFor="let m of matches">
+  <app-result [matchInput]="m"></app-result>
+</div>

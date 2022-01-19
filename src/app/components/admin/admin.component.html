@@ -1,0 +1,43 @@
+<app-banner title="Admin Dashboard"></app-banner>
+<div style="margin-left: 40%;">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                role="tab" aria-controls="home" aria-selected="true">Matches</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+                role="tab" aria-controls="profile" aria-selected="false">Players</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="teams-tab" data-bs-toggle="tab" data-bs-target="#teams" type="button"
+                role="tab" aria-controls="teams" aria-selected="false">Teams</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="users-tab" data-bs-toggle="tab" data-bs-target="#users" type="button"
+                role="tab" aria-controls="users" aria-selected="false">Users</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="articles-tab" data-bs-toggle="tab" data-bs-target="#articles" type="button"
+                role="tab" aria-controls="articles" aria-selected="false">Articles</button>
+        </li>
+    </ul>
+</div>
+<div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <app-admin-matches></app-admin-matches>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <app-admin-players></app-admin-players>
+    </div>
+    <div class="tab-pane fade" id="teams" role="tabpanel" aria-labelledby="teams-tab">
+        <app-admin-teams></app-admin-teams>
+    </div>
+    <div class="tab-pane fade" id="users" role="tabpanel" aria-labelledby="users-tab">
+        <app-admin-users></app-admin-users>
+    </div>
+    <div class="tab-pane fade" id="articles" role="tabpanel" aria-labelledby="articles-tab">
+        <app-admin-articles></app-admin-articles>
+    </div>
+
+</div>

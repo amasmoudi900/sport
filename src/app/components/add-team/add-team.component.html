@@ -1,0 +1,38 @@
+<app-banner title="Add Team Form"></app-banner>
+<div class="site-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <form #addTeamForm="ngForm" (ngSubmit)="addTeam()">
+                    <div class="form-group">
+                        <input type="text" class="form-control" [(ngModel)]="team.name"
+                            [ngModelOptions]="{standalone: true}" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="number" class="form-control" [(ngModel)]="team.foundation"
+                            [ngModelOptions]="{standalone: true}" placeholder="Foundation">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" [(ngModel)]="team.country"
+                            [ngModelOptions]="{standalone: true}" placeholder="Country">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" [(ngModel)]="team.stadium"
+                            [ngModelOptions]="{standalone: true}" placeholder="Stadium">
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-success" type="button" (click)="filePicker.click()">Select team logo</button> <br>
+                        <img [src]="imagePreview" *ngIf="imagePreview"  height="150px" width="150px" alt="">
+                    </div>
+                    <div class="form-group" style="visibility: hidden;">
+                        <input type="file" class="form-control" #filePicker (change)="onImageSelected($event)">
+                    </div>
+
+                    <div class="form-group text-center">
+                        <input type="submit" class="btn btn-primary py-3 px-5" value="Add Team">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

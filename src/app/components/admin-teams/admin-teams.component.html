@@ -1,0 +1,30 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Stadium</th>
+                <th scope="col">Foundation</th>
+                <th scope="col">Country</th>
+                <th scope="col">Image</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let team of teams">
+                <td>{{team._id}}</td>
+                <td>{{team.name}}</td>
+                <td>{{team.stadium}}</td>
+                <td>{{team.foundation}}</td>
+                <td>{{team.country}}</td>
+                <td><img [src]="team.img" *ngIf="team.img" height="100px" width="100px" alt=""></td>
+                <td>
+                    <button class="btn btn-success">Display</button>
+                    <button class="btn btn-info">Edit</button>
+                    <button class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

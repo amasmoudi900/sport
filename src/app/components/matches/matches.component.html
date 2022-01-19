@@ -1,0 +1,7 @@
+<app-banner title="Matches"></app-banner>
+<div class="container" style="padding-top: 200px;">
+
+    <div *ngFor="let match of allMatches">
+        <app-result [matchInput]="match"></app-result>
+    </div>
+</div>
